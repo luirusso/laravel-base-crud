@@ -16,12 +16,6 @@
                         Title
                     </th>
                     <th>
-                        Cover
-                    </th>
-                    <th>
-                        Description
-                    </th>
-                    <th>
                         Price
                     </th>
                     <th>
@@ -46,12 +40,6 @@
                         </td>
                         <td>
                             {{ $comic->title }}
-                        </td>
-                        <td>
-                            <img src="{{ $comic->thumb }}" alt="">
-                        </td>
-                        <td>
-                            {{ $comic->description }}
                         </td>
                         <td>
                             ${{ $comic->price }}
