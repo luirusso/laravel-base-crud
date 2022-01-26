@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="container">
-        <h1>
+        <h1 class="mb-5">
             Welcome to Comics Shop
         </h1>
 
