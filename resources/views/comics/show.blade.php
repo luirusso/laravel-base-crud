@@ -2,6 +2,10 @@
 
 @section('content')
     <section class="container">
+        <div class="mb-5">
+            <a class="fw-bold" href="{{ route('comics.index') }}">Back to Archive</a>
+        </div>
+
         <h1 class="mb-5">{{ $comic['title'] }}</h1>
 
         <div class="mb-5">
@@ -44,11 +48,13 @@
                             </tr>
                         </tbody>
                     </table>
-                    
-                    <h3>Description</h3>
-                    <p>
-                        {{ $comic['description'] }}
-                    </p>
+
+                    <div class="mt-5">
+                        <h3>Description</h3>
+                        <p>
+                            {{ $comic['description'] }}
+                        </p>
+                    </div>
 
                 </div>
             </div>
