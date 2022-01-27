@@ -45,7 +45,7 @@
                             <a class="btn btn-success" href="{{ route('comics.show', $comic->slug) }}">Show</a>
                         </td>
                         <td>
-                            <a class="btn btn-primary" href="#">Edit</a>
+                            <a class="btn btn-primary" href="{{ route('comics.edit', $comic->id) }}">Edit</a>
                         </td>
                         <td>
                             <a class="btn btn-danger" href="#">Delete</a>

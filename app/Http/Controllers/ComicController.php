@@ -65,7 +65,7 @@ class ComicController extends Controller
 
 
         // REDIRECT TO NEW SHOW DETAIL PAGE
-        return redirect()->route('comics.show', $new_comic->id);
+        return redirect()->route('comics.show', $new_comic->slug);
     }
 
     /**
@@ -94,7 +94,13 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        // OBTAIN COMIC TO EDIT
+        $comic = Comic::find($id);
+        if($comic) {
+            return view('comics.edit', compact('comic'));
+        }
+
+        abort(404);
     }
 
     /**
