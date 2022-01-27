@@ -19,9 +19,6 @@
                         Series
                     </th>
                     <th>
-                        Sale Date
-                    </th>
-                    <th>
                         Type
                     </th>
                     <th colspan="3">
@@ -40,9 +37,6 @@
                         </td>
                         <td>
                             {{ $comic->series }}
-                        </td>
-                        <td>
-                            {{ $comic->sale_date }}
                         </td>
                         <td>
                             {{ $comic->type }}

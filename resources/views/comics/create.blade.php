@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="container">
-        <h1>
+        <h1 class="text-center mb-5">
             Add New Comic to Archive
         </h1>
 
