@@ -2,10 +2,17 @@
 
 @section('content')
     <section class="container">
-        <h1>
+        <h1 class="mb-5">
             Our Comics
         </h1>
         
+        @if (session('deleted'))
+            <div class="alert alert-success">
+                <strong>
+                    {{ session('deleted') }} successfully deleted.
+                </strong>
+            </div>
+        @endif
         <table class="table">
             <thead>
                 <tr>
@@ -48,7 +55,12 @@
                             <a class="btn btn-primary" href="{{ route('comics.edit', $comic->id) }}">Edit</a>
                         </td>
                         <td>
-                            <a class="btn btn-danger" href="#">Delete</a>
+                            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+
+                                <input type="submit" class="btn btn-danger" value="Delete">
+                            </form>
                         </td>
                     </tr>
                 @endforeach
