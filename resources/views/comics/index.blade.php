@@ -16,9 +16,6 @@
                         Title
                     </th>
                     <th>
-                        Price
-                    </th>
-                    <th>
                         Series
                     </th>
                     <th>
@@ -42,9 +39,6 @@
                             {{ $comic->title }}
                         </td>
                         <td>
-                            ${{ $comic->price }}
-                        </td>
-                        <td>
                             {{ $comic->series }}
                         </td>
                         <td>
@@ -57,10 +51,10 @@
                             <a class="btn btn-success" href="{{ route('comics.show', $comic->id) }}">Show</a>
                         </td>
                         <td>
-                            EDIT
+                            <a class="btn btn-primary" href="#">Edit</a>
                         </td>
                         <td>
-                            DELETE
+                            <a class="btn btn-danger" href="#">Delete</a>
                         </td>
                     </tr>
                 @endforeach
