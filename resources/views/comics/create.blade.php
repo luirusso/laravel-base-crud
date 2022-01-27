@@ -2,6 +2,9 @@
 
 @section('content')
     <section class="container">
+        <div class="mb-5">
+            <a class="fw-bold" href="{{ route('comics.index') }}">Back to Archive</a>
+        </div>
         <h1 class="text-center mb-5">
             Add New Comic to Archive
         </h1>

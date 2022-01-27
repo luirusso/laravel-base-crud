@@ -112,7 +112,19 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+
+        // GET ITEM THAT NEEDS TO BE UPDATED
+        $comic = Comic::find($id);
+
+        // UPDATE DB COLUMN
+        $data['slug'] = Str::slug($data['title'], '-');
+        $comic->update($data);
+
+        // SAVE ON DB IS AUTOMATIC ON UPDATE -> !!!save() not required!!!
+
+        // REDIRECT
+        return redirect()->route('comics.show', $comic->slug);
     }
 
     /**
