@@ -42,7 +42,7 @@
                             {{ $comic->type }}
                         </td>
                         <td>
-                            <a class="btn btn-success" href="{{ route('comics.show', $comic->id) }}">Show</a>
+                            <a class="btn btn-success" href="{{ route('comics.show', $comic->slug) }}">Show</a>
                         </td>
                         <td>
                             <a class="btn btn-primary" href="#">Edit</a>
