@@ -2,10 +2,14 @@
 
 @section('content')
     <section class="container">
-        <h1 class="mb-5">
-            Our Comics
-        </h1>
         
+        <div class="d-flex w-100 justify-content-between align-items-center">
+            <h1>
+                Our Comics
+            </h1>
+            <a class="btn btn-info p-2" href="{{ route('comics.create') }}">+ Add New Comic</a>
+        </div>
+
         @if (session('deleted'))
             <div class="alert alert-success">
                 <strong>
@@ -49,7 +53,7 @@
                             {{ $comic->type }}
                         </td>
                         <td>
-                            <a class="btn btn-success" href="{{ route('comics.show', $comic->slug) }}">Show</a>
+                            <a class="btn btn-secondary" href="{{ route('comics.show', $comic->slug) }}">Show</a>
                         </td>
                         <td>
                             <a class="btn btn-primary" href="{{ route('comics.edit', $comic->id) }}">Edit</a>
